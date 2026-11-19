@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Please cite this repository with the specific commit used for your calculations."
+type: software
+title: "Superposed Zeno schedule: notebooks and supporting data"
+authors:
+  - family-names: Seidel
+    given-names: Olivia
+  - family-names: Sussman
+    given-names: Sara
+repository-code: "https://github.com/OliviaSeidel/superposed_zeno_schedule"
+url: "https://github.com/OliviaSeidel/superposed_zeno_schedule"

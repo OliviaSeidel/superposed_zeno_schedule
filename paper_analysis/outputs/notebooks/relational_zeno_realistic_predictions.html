@@ -7531,7 +7531,11 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="n">LEGACY_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">"legacy"</span><span class="p">)</span>
+<span class="n">LEGACY_DIR</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">scipy.integrate</span><span class="w"> </span><span class="kn">import</span> <span class="n">solve_ivp</span>
 
@@ -7681,8 +7685,8 @@ CNOT time = 180 ns, fidelity = 0.9977
 <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.02</span><span class="p">,</span> <span class="mf">1.02</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">'fig1_relational_zeno_dynamics.pdf'</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">'tight'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">'fig1_relational_zeno_dynamics.png'</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">'tight'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">LEGACY_DIR</span> <span class="o">/</span> <span class="s1">'fig1_relational_zeno_dynamics.pdf'</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">'tight'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">LEGACY_DIR</span> <span class="o">/</span> <span class="s1">'fig1_relational_zeno_dynamics.png'</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">'tight'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -7736,8 +7740,8 @@ CNOT time = 180 ns, fidelity = 0.9977
 <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.02</span><span class="p">,</span> <span class="mf">1.02</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">'fig2_zeno_realistic_scaling.pdf'</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">'tight'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">'fig2_zeno_realistic_scaling.png'</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">'tight'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">LEGACY_DIR</span> <span class="o">/</span> <span class="s1">'fig2_zeno_realistic_scaling.pdf'</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">'tight'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">LEGACY_DIR</span> <span class="o">/</span> <span class="s1">'fig2_zeno_realistic_scaling.png'</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">'tight'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
 <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">]:</span>
@@ -7804,8 +7808,8 @@ No-memory noisy control at T_pi: P0=0.040
 <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">fraction_T1</span><span class="p">)</span><span class="o">*</span><span class="mf">1.15</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">'fig3_coherence_budget.pdf'</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">'tight'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">'fig3_coherence_budget.png'</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">'tight'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">LEGACY_DIR</span> <span class="o">/</span> <span class="s1">'fig3_coherence_budget.pdf'</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">'tight'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">LEGACY_DIR</span> <span class="o">/</span> <span class="s1">'fig3_coherence_budget.png'</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">'tight'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -7853,8 +7857,8 @@ No-memory noisy control at T_pi: P0=0.040
 <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mf">0.94</span><span class="p">,</span> <span class="mf">1.005</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">'fig4_cumulative_gate_budget.pdf'</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">'tight'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">'fig4_cumulative_gate_budget.png'</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">'tight'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">LEGACY_DIR</span> <span class="o">/</span> <span class="s1">'fig4_cumulative_gate_budget.pdf'</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">'tight'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">LEGACY_DIR</span> <span class="o">/</span> <span class="s1">'fig4_cumulative_gate_budget.png'</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">'tight'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -7905,8 +7909,8 @@ No-memory noisy control at T_pi: P0=0.040
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Local Pauli tomography settings'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">'fig5_tomography_scaling.pdf'</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">'tight'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">'fig5_tomography_scaling.png'</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">'tight'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">LEGACY_DIR</span> <span class="o">/</span> <span class="s1">'fig5_tomography_scaling.pdf'</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">'tight'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">LEGACY_DIR</span> <span class="o">/</span> <span class="s1">'fig5_tomography_scaling.png'</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">'tight'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
 <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">]:</span>
